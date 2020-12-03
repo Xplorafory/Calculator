@@ -7,7 +7,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building the application'
-                sh "mvn -B"
+                sh "mvn -B integration-test"
             }
         }
 
