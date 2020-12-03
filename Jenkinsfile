@@ -1,10 +1,14 @@
 pipeline {
     agent any 
-
+    tools {
+        maven 'M3'
+        jdk
+    }
     stages {
         stage("build") {
             steps {
-                echo 'building the application...'
+                echo 'building the application'
+                sh mvn install
             }
         }
 
